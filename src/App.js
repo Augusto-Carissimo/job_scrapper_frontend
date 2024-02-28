@@ -1,16 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Position from './Position.js'
+import Position from './components/Position.js'
+import Header from './components/Header.js'
 
 function App() {
+  function handleClick() {
+    window.fetch('/position/scraper')
+  }
+
   const [allPosition, setAllPosition] = React.useState([])
 
   React.useEffect(() => {
     window.fetch('/position')
       .then(response => response.json())
       .then(data => setAllPosition(data))
-  }, [])
+  }, [handleClick])
 
   const positions = allPosition.map(position => {
     return (
@@ -23,7 +27,13 @@ function App() {
 
   return (
     <div>
-      {positions}
+      <button onClick={handleClick}> New search </button>
+      <table>
+        <Header/>
+        <tbody>
+          {positions}
+        </tbody>
+      </table>
     </div>
   )
 }
