@@ -10,7 +10,7 @@ function App() {
   console.log(refresh)
 
   React.useEffect(() => {
-    window.fetch('http://localhost:3001/position')
+    window.fetch('https://job-scrapper-api.onrender.com/position')
       .then(response => response.json())
       .then(data => setAllPosition(data))
   }, [refresh])
@@ -25,7 +25,7 @@ function App() {
   })
 
   function handleClick() {
-    window.fetch('http://localhost:3001/position/scraper')
+    window.fetch('https://job-scrapper-api.onrender.com/position/scraper')
       .then(response => response.json())
       .then(data => setRefresh(data))
 
