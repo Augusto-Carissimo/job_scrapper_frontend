@@ -14,7 +14,7 @@ function App() {
   }, [refresh]);
 
   const fetchPositions = () => {
-    fetch('http://localhost:3001/position')
+    fetch(`${process.env.REACT_APP_API_URL}/position`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -28,7 +28,7 @@ function App() {
   };
 
   const handleClick = () => {
-    fetch('http://localhost:3001/position/scraper')
+    fetch(`${process.env.REACT_APP_API_URL}/position/scraper`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
