@@ -14,6 +14,10 @@ function Position(prop) {
       <td>
         <a href={prop.website} target='_blank' rel="noopener noreferrer"> {prop.website} </a>
       </td>
+
+      <td>
+        {new Date(prop.created_at).toLocaleDateString('en-GB')}
+      </td>
     </tr>
   )
 }
