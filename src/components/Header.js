@@ -11,6 +11,9 @@ function Header() {
         <th class_name='website_column'>
           Website
         </th>
+        <th class_name='website_created_at'>
+          Found
+        </th>
       </tr>
     </thead>
   )
