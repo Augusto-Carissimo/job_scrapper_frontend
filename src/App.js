@@ -2,12 +2,15 @@ import React from 'react';
 import './App.css';
 import Position from './components/Position.js';
 import Header from './components/Header.js';
+import loadingIcon from './loading.gif';
 
 function App() {
   const [allPositions, setAllPositions] = React.useState([]);
   const [refresh, setRefresh] = React.useState(false);
   const [currentPage, setCurrentPage] = React.useState(1);
   const itemsPerPage = 15;
+  const [loading, setLoading] = React.useState(false); // New state for loading indicator
+
 
   React.useEffect(() => {
     fetchPositions();
@@ -28,6 +31,7 @@ function App() {
   };
 
   const handleClick = () => {
+    setLoading(true);
     fetch(`${process.env.REACT_APP_API_URL}/position/scraper`)
       .then(response => {
         if (!response.ok) {
@@ -38,6 +42,9 @@ function App() {
       .then(data => setRefresh(!refresh))
       .catch(error => {
         console.error('Error triggering scraper:', error);
+      })
+      .finally(() => {
+        setLoading(false)
       });
   };
 
@@ -63,8 +70,8 @@ function App() {
 
   return (
     <div>
-      <button onClick={handleClick}>New search</button>
-
+      <button onClick={handleClick} disabled={loading}>New search</button>
+      {loading && <img src={loadingIcon} alt="Loading..." className='small-loading-icon'/>}
       <table>
         <Header />
         <tbody>
