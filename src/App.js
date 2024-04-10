@@ -48,6 +48,19 @@ function App() {
       });
   };
 
+  const handleTest = () => {
+    fetch(`${process.env.REACT_APP_API_URL}/position/test`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        console.error('test', response.json());
+      })
+      .catch(error => {
+        console.error('Error triggering scraper:', error);
+      });
+  };
+
   const handlePreviousPage = () => {
     setCurrentPage(prevPage => Math.max(prevPage - 1, 1));
   };
@@ -71,6 +84,7 @@ function App() {
   return (
     <div>
       <button onClick={handleClick} disabled={loading}>New search</button>
+      <button onClick={handleTest} disabled={loading}>Test</button>
       {loading && <img src={loadingIcon} alt="Loading..." className='small-loading-icon'/>}
       <table>
         <Header />
