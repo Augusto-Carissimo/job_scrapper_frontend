@@ -54,7 +54,7 @@ function App() {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        console.error('test', response.json());
+        console.log(response.json());
       })
       .catch(error => {
         console.error('Error triggering scraper:', error);
