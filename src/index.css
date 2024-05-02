@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  margin: 10px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -19,11 +20,43 @@ code {
 
 table {
   width: 80%;
+  margin: 0 auto;
+  table-layout: fixed;
 }
 
-th, td {
-  padding: 5px;
-}
 th {
   text-align: left;
+  width: 200px;
+}
+
+td {
+  padding: 5px;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.App {
+  text-align: center;
+}
+
+.small-loading-icon {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.button-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button-container button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
 }

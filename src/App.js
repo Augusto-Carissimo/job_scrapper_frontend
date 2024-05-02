@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './index.css';
 import Position from './components/Position.js';
 import Header from './components/Header.js';
 import loadingIcon from './loading.gif';
@@ -64,8 +64,10 @@ function App() {
           {positions}
         </tbody>
       </table>
-      <button onClick={handlePreviousPage} disabled={currentPage === 1}>Previous</button>
-      <button onClick={handleNextPage} disabled={currentPage === Math.ceil(allPositions.length / itemsPerPage)}>Next</button>
+      <div className="button-container">
+        <button onClick={handlePreviousPage} disabled={currentPage === 1}>Previous</button>
+        <button onClick={handleNextPage} disabled={currentPage === Math.ceil(allPositions.length / itemsPerPage)}>Next</button>
+      </div>
     </div>
   );
 }
