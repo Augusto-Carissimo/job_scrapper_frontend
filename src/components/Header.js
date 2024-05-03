@@ -2,16 +2,16 @@ function Header() {
   return (
     <thead>
       <tr>
-        <th class_name='position_column'>
+        <th style={{ width: '55%' }} class_name='position_column'>
           Position
         </th>
-        <th class_name='company_column'>
+        <th style={{ width: '10%' }} class_name='company_column'>
           Company
         </th>
-        <th class_name='website_column'>
+        <th style={{ width: '20%' }} class_name='website_column'>
           Website
         </th>
-        <th class_name='website_created_at'>
+        <th style={{ width: '10%' }} class_name='website_created_at'>
           Found
         </th>
       </tr>
