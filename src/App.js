@@ -8,7 +8,7 @@ import bannerJpg from './banner.jpg';
 function App() {
   const [allPositions, setAllPositions] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 15;
+  const itemsPerPage = 13;
   const [loading, setLoading] = useState(false);
 
   const fetchPositions = () => {
