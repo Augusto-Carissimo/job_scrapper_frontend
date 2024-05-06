@@ -1,43 +1,38 @@
-/* Reset styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Body styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #fff; /* Set background color of the entire page to a light gray */
-  filter: grayscale(100%); /* Apply grayscale filter to make the page grayscale */
+  background-color: #fff;
+  filter: grayscale(100%);
 }
 
-/* Container styles */
 .container {
-  max-width: 1200px; /* Adjust as needed */
-  margin: 0 auto; /* Center the container horizontally */
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
+  min-height: 100vh
 }
 
-/* Banner styles */
 .banner-jpg {
   display: block;
   width: 50%;
-  max-width: 100%; /* Ensure image doesn't exceed container width */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: 20px; /* Add spacing between banner and table */
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
-/* Table styles */
 table {
   width: 100%;
-  border-collapse: collapse; /* Remove space between table cells */
+  border-collapse: collapse;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Table header styles */
 thead {
   background-color: #f0f0f0;
 }
@@ -46,18 +41,16 @@ th,
 td {
   padding: 10px;
   text-align: left;
-  white-space: nowrap; /* Prevent text wrapping */
-  overflow: hidden; /* Hide overflowing text */
-  text-overflow: ellipsis; /* Display ellipsis for overflow text */
-  background-color: #fff; /* Set background color of table cells to white */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #fff;
 }
 
-/* Table body styles */
 tbody tr:nth-child(even) {
-  background-color: #f9f9f9; /* Alternate row background color */
+  background-color: #f9f9f9;
 }
 
-/* Button container styles */
 .button-container {
   position: fixed;
   bottom: 20px;
@@ -71,22 +64,38 @@ button {
   margin: 0 10px;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #333; /* Set button background color to dark gray */
-  color: #fff; /* Set button text color to white */
+  background-color: #333;
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .button-container button:disabled {
-  opacity: 0.5; /* Reduce opacity for disabled buttons */
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
 .table-container {
-  margin-bottom: 60px; /* Adjust the margin to leave space for the button container */
+  margin-bottom: 60px;
 }
 
 .small-loading-icon {
   width: 5%;
+}
+
+.position_column {
+  width: 50%;
+}
+
+.company_column {
+  width: 20%;
+}
+
+.website_column {
+  width: 20%;
+}
+
+.website_created_at {
+  width: 10%;
 }
