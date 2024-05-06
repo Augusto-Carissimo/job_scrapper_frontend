@@ -8,7 +8,7 @@ import loadingIcon from './loading.gif';
 function App() {
   const [allPositions, setAllPositions] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 13;
+  const itemsPerPage = 10;
   const [loading, setLoading] = useState(false);
 
   const fetchPositions = () => {
