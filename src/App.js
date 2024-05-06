@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './index.css';
 import Position from './components/Position.js';
 import Header from './components/Header.js';
+import Banner from './components/Banner.js';
 import loadingIcon from './loading.gif';
-import bannerJpg from './banner.jpg';
 
 function App() {
   const [allPositions, setAllPositions] = useState([]);
@@ -55,16 +55,19 @@ function App() {
   ));
 
   return (
-    <div>
-      {<img src={bannerJpg} alt="Banner" className="banner-jpg" />}
-
-      {loading && <img src={loadingIcon} alt="Loading..." className='small-loading-icon'/>}
-      <table>
-        <Header />
-        <tbody>
-          {positions}
-        </tbody>
-      </table>
+    <div className="container">
+      < Banner />
+      <div class="table-container">
+        <table>
+          <thead>
+            <Header />
+          </thead>
+          {loading && <img src={loadingIcon} alt="Loading..." className='small-loading-icon'/>}
+          <tbody>
+            {positions}
+          </tbody>
+        </table>
+      </div>
       <div className="button-container">
         <button onClick={handlePreviousPage} disabled={currentPage === 1}>Previous</button>
         <button onClick={handleNextPage} disabled={currentPage === Math.ceil(allPositions.length / itemsPerPage)}>Next</button>

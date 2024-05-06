@@ -1,68 +1,92 @@
+/* Reset styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Body styles */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
+  background-color: #fff; /* Set background color of the entire page to a light gray */
+  filter: grayscale(100%); /* Apply grayscale filter to make the page grayscale */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Container styles */
+.container {
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px;
 }
 
-table {
-  width: 80%;
-  margin: 0 auto;
-  table-layout: fixed;
-}
-
-th {
-  text-align: left;
-  width: 200px;
-}
-
-td {
-  padding: 5px;
-  width: 200px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.App {
-  text-align: center;
-}
-
-.small-loading-icon {
-  width: 50px;
-  height: 50px;
+/* Banner styles */
+.banner-jpg {
   display: block;
-  margin: 0 auto;
+  width: 50%;
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Add spacing between banner and table */
 }
 
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Remove space between table cells */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header styles */
+thead {
+  background-color: #f0f0f0;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Display ellipsis for overflow text */
+  background-color: #fff; /* Set background color of table cells to white */
+}
+
+/* Table body styles */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternate row background color */
+}
+
+/* Button container styles */
 .button-container {
   position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+  text-align: center;
+  margin-top: 20px;
 }
 
-.button-container button {
+button {
   margin: 0 10px;
   padding: 10px 20px;
   font-size: 16px;
+  background-color: #333; /* Set button background color to dark gray */
+  color: #fff; /* Set button text color to white */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.banner-jpg {
-  width: 40%;
-  display: block;
-  transform: translate(550px);
+.button-container button:disabled {
+  opacity: 0.5; /* Reduce opacity for disabled buttons */
+  cursor: not-allowed;
+}
+
+.table-container {
+  margin-bottom: 60px; /* Adjust the margin to leave space for the button container */
+}
+
+.small-loading-icon {
+  width: 5%;
 }

@@ -1,22 +1,15 @@
+import React from 'react';
+import '../index.css';
+
 function Header() {
   return (
-    <thead>
-      <tr>
-        <th style={{ width: '50%' }} class_name='position_column'>
-          Position
-        </th>
-        <th style={{ width: '20%' }} class_name='company_column'>
-          Company
-        </th>
-        <th style={{ width: '20%' }} class_name='website_column'>
-          Website
-        </th>
-        <th style={{ width: '10%' }} class_name='website_created_at'>
-          Found
-        </th>
-      </tr>
-    </thead>
-  )
+    <tr>
+      <th className="position_column">Position</th>
+      <th className="company_column">Company</th>
+      <th className="website_column">Website</th>
+      <th className="website_created_at">Found</th>
+    </tr>
+  );
 }
 
-export default Header
+export default Header;
