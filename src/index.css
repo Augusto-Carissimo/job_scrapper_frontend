@@ -52,12 +52,16 @@ tbody tr:nth-child(even) {
 }
 
 .button-container {
-  position: fixed;
+  position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex; /* Use flexbox to align buttons side by side */
+  justify-content: center;
 }
 
 button {
