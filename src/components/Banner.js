@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerJpg from '../banner.jpg';
+import bannerJpg from '../banner.png';
 import '../index.css';
 
 function Banner() {

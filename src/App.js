@@ -58,7 +58,7 @@ function App() {
     <div className="container">
       < Banner />
       <div class="table-container">
-        <table>
+        <table className='table'>
           <thead>
             <Header />
           </thead>
