@@ -3,7 +3,7 @@ import './index.css';
 import Position from './components/Position.js';
 import Header from './components/Header.js';
 import Banner from './components/Banner.js';
-import loadingIcon from './loading.gif';
+import loadingIcon from './Orb.webp';
 
 function App() {
   const [allPositions, setAllPositions] = useState([]);
@@ -56,14 +56,22 @@ function App() {
 
   return (
     <div className="container">
-      < Banner />
-      <div class="table-container">
-        <table className='table'>
+      <Banner />
+      <div className="table-container">
+        <table className="table">
           <thead>
             <Header />
           </thead>
-          {loading && <img src={loadingIcon} alt="Loading..." className='small-loading-icon'/>}
           <tbody>
+            {loading && (
+              <tr>
+                <td colSpan="100%">
+                  <div className="loading-container">
+                    <img src={loadingIcon} alt="Loading..." className="small-loading-icon" />
+                  </div>
+                </td>
+              </tr>
+            )}
             {positions}
           </tbody>
         </table>

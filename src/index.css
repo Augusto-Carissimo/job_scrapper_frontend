@@ -88,7 +88,13 @@ button {
 }
 
 .small-loading-icon {
-  width: 5%;
+  width: 25%;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .position_column {
