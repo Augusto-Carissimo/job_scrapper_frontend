@@ -58,7 +58,7 @@ function App() {
     <div className="container">
       <Banner />
       <div className="table-container">
-        <table className="table">
+        <table className={`table ${loading ? 'loading' : ''}`}>
           <thead>
             <Header />
           </thead>

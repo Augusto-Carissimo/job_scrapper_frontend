@@ -35,8 +35,8 @@ table {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-thead {
-  background-color: #f0f0f0;
+.table.loading {
+  background-color: black;
 }
 
 th,
@@ -46,12 +46,7 @@ td {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: #595D7A;
   font-size: 1.1em;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
 }
 
 .button-container {
