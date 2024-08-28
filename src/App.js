@@ -60,7 +60,7 @@ function App() {
       <div className="table-container">
         <table className={`table ${loading ? 'loading' : ''}`}>
           <thead>
-            <Header />
+            {loading ? <tr className='header-alternative'> It might take a second to spin up </tr> : <Header />}
           </thead>
           <tbody>
             {loading && (

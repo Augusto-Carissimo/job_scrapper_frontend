@@ -116,3 +116,11 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.header-alternative {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
